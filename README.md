@@ -1,6 +1,6 @@
-Watermelon开源项目
+token服务化
 ===
-基于  maven + spring + spring mvc + mongodb + json + morphia 框架
+基于  maven + spring + spring mvc + mongodb  框架
 
 
 # 填坑
@@ -9,6 +9,5 @@ Watermelon开源项目
 更新计划将在wiki中填写
 
 
-# 参考
 
 ## morphia API http://mongodb.github.io/morphia/1.1/javadoc/
