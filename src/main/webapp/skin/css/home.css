@@ -1,0 +1,100 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -120px;
+  /* Pad bottom by footer height */
+  padding: 0 0 120px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 240px;
+  background-color: #6CA6CD;
+  font-size: 16px;
+  color:#2E2E2E;
+  text-shadow: 0 0px 1px #7A7A7A;
+}
+
+/* for min footer */
+@media (min-width: 768px){
+	#footer{height: 120px;}
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.name-header{
+	text-shadow: 0 1px 1px #123;
+}
+
+#twibo{
+	border:1px solid;
+}
+
+.twibo-split-hr{
+	color:#F48C12;
+	background:#fffde0;
+	border:2px solid #f9f2a7;
+	border-radius:25px;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+}
+
+.twibo-bk,.comment-bk{
+	position:relative;
+	font-size: 12px;
+	margin: 5px 5px 5px 5px;
+	padding: 2px 2px 2px 2px;
+	border-bottom: 1px solid #ddd;
+}
+.twibo-line{
+	font-size: 8px;
+}
+.twibo-time{
+	color: #9da0a4;
+}
+.twibo-link{	
+}
+.twibo-info,.comment-info{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	margin:2px;
+	color:#333333;
+}
+
+.footer-font{
+	color:white;
+}

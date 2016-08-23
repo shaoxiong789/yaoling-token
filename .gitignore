@@ -1,1 +1,8 @@
 /target/
+<<<<<<< HEAD
+=======
+/.settings/
+.classpath
+.project
+>>>>>>> branch 'master' of https://github.com/shaoxiong789/token-service.git
+/README.md

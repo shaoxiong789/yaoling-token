@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.png"> -->
+
+    <title>大西瓜</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="skin/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="skin/css/home.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <#assign ctx=(rc.getContextPath())!''>
+  </head>
+
+  <body>
+
+     <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#"><i class="icon-tag">待定</i></a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+		      <div class="form-group">
+		        <input type="text" class="form-control" placeholder="Search">
+		      </div>
+		      <button type="submit" class="btn btn-info">搜索</button>
+		    </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+      	<div class="row">
+      		<!-- start home zone -->
+      		<div class="col-lg-2">
+      			<div class="list-group">
+      				<a href="${ctx}/home" class="list-group-item active">
+		              <h4 class="list-group-item-heading">${user.nickName}</h4>
+		              <p class="list-group-item-text">首页</p>
+		            </a>
+		            <a href="${ctx}/twibo/${user._id}/follow" class="list-group-item">
+		              <h4 class="list-group-item-heading">关注</h4>
+		              <p class="list-group-item-text">${user.followsSize}</p>
+		            </a>
+		            <a href="${ctx}/twibo/${user._id}/fans" class="list-group-item">
+		              <h4 class="list-group-item-heading">粉丝</h4>
+		              <p class="list-group-item-text">${user.fansSize}</p>
+		            </a>
+		            <a href="${ctx}/twibo/${user._id}/orign" class="list-group-item">
+		              <h4 class="list-group-item-heading">微博</h4>
+		              <p id="twiSize" class="list-group-item-text">${user.twiSize}</p>
+		            </a>
+      			</div>
+      		</div><!-- end of home zone -->
+	        <div class="col-lg-6">
+	        	<p>
+	        		<textarea id="twibo" rows="3" cols="80" maxlength="200"></textarea>
+	        	</p>
+	        	<p>
+	        		<ul class="list-inline">
+	        			<li style="margin:10px;">#</li><li style="margin:10px;">#</li><li style="margin:10px;">#</li>
+	        			<li><button id="sendTwibo" type="button" class="btn btn-lg btn-info btn-block" style="padding:10px 30px 10px 30px;">发布</button></li>
+	        		</ul>
+	        	</p>
+	        	<p class="twibo-split-hr text-center">
+	        		大西瓜小企业开源社交, 欢迎热爱开源的开发人员加入
+	        	</p>
+	        	<div id="twibo-pool">
+	        	</div>
+	        	<p>小尾巴...</p>
+	        </div>
+	        <div class="col-lg-4">
+	        </div>
+	       
+        </div><!-- end of row -->
+      </div><!-- end of container -->
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="footer-font credit">&copy; Bruce Zhang 2013 在絮絮叨叨的尾巴上添加一行看起来挺显眼的页脚用来测试这个页面究竟有多高不过在小屏幕上会显示成什么样子呢就完全不知道了</p>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script >
+    var ctx='${ctx}',NICKNAME='${user.nickName}';
+    </script>
+    <script src="skin/js/jquery.js"></script>
+    <script src="skin/js/bootstrap.min.js"></script>
+    <script src="skin/js/bootstrap-maxlength.min.js"></script>
+    <script src="skin/js/bootbox.min.js"></script>
+    <script src="skin/js/home.js?${.now?string('yyyy-MM-dd HH:mm')}"></script>
+   
+  </body>
+</html>
