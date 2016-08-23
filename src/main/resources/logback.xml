@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+
+	<!-- Appenders -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">  
+        <encoder>  
+            <pattern>[%-5level] %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>  
+        </encoder>  
+    </appender>
+	
+	<logger name="com.yaoling">
+		<level value="debug" />
+	</logger>
+	
+	<logger name="com.alipay">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>	
+	
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.security">
+		<level value="info" />
+	</logger>
+	
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="console" />
+	</root>
+	
+</configuration>
